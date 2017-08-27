@@ -1,9 +1,0 @@
-/Users/czkiam/Documents/xplat-dotnet-core/bin/Release/netcoreapp1.1/xplat-dotnet-core.deps.json
-/Users/czkiam/Documents/xplat-dotnet-core/bin/Release/netcoreapp1.1/xplat-dotnet-core.runtimeconfig.json
-/Users/czkiam/Documents/xplat-dotnet-core/bin/Release/netcoreapp1.1/xplat-dotnet-core.runtimeconfig.dev.json
-/Users/czkiam/Documents/xplat-dotnet-core/bin/Release/netcoreapp1.1/xplat-dotnet-core.dll
-/Users/czkiam/Documents/xplat-dotnet-core/bin/Release/netcoreapp1.1/xplat-dotnet-core.pdb
-/Users/czkiam/Documents/xplat-dotnet-core/obj/Release/netcoreapp1.1/xplat-dotnet-core.csproj.CoreCompileInputs.cache
-/Users/czkiam/Documents/xplat-dotnet-core/obj/Release/netcoreapp1.1/xplat-dotnet-core.AssemblyInfo.cs
-/Users/czkiam/Documents/xplat-dotnet-core/obj/Release/netcoreapp1.1/xplat-dotnet-core.dll
-/Users/czkiam/Documents/xplat-dotnet-core/obj/Release/netcoreapp1.1/xplat-dotnet-core.pdb
