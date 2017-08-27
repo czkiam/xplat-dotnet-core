@@ -1,7 +1,7 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/czkiam/.nuget/packages"
+      "C:\\Users\\czkiam\\.nuget\\packages"
     ]
   }
 }
