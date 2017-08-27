@@ -1,7 +1,8 @@
-﻿<Properties StartupConfiguration="{6196C291-B8D8-4EC4-AF18-4635662ABA73}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+﻿<Properties StartupConfiguration="{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinkChecker.cs">
     <Files>
-      <File FileName="Program.cs" Line="13" Column="1" />
+      <File FileName="Program.cs" Line="16" Column="13" />
+      <File FileName="LinkChecker.cs" Line="19" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
