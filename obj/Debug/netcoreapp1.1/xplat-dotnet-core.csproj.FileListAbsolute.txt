@@ -6,3 +6,5 @@
 /Users/czkiam/Documents/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.AssemblyInfo.cs
 /Users/czkiam/Documents/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.dll
 /Users/czkiam/Documents/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.pdb
+/Users/czkiam/Documents/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.csprojResolveAssemblyReference.cache
+/Users/czkiam/Documents/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.csproj.CoreCompileInputs.cache
