@@ -8,13 +8,3 @@
 /Users/czkiam/Documents/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.pdb
 /Users/czkiam/Documents/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.csprojResolveAssemblyReference.cache
 /Users/czkiam/Documents/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.csproj.CoreCompileInputs.cache
-D:/GItRepos/xplat-dotnet-core/bin/Debug/netcoreapp1.1/xplat-dotnet-core.deps.json
-D:/GItRepos/xplat-dotnet-core/bin/Debug/netcoreapp1.1/xplat-dotnet-core.runtimeconfig.json
-D:/GItRepos/xplat-dotnet-core/bin/Debug/netcoreapp1.1/xplat-dotnet-core.runtimeconfig.dev.json
-D:/GItRepos/xplat-dotnet-core/bin/Debug/netcoreapp1.1/xplat-dotnet-core.dll
-D:/GItRepos/xplat-dotnet-core/bin/Debug/netcoreapp1.1/xplat-dotnet-core.pdb
-D:/GItRepos/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.csprojResolveAssemblyReference.cache
-D:/GItRepos/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.csproj.CoreCompileInputs.cache
-D:/GItRepos/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.AssemblyInfo.cs
-D:/GItRepos/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.dll
-D:/GItRepos/xplat-dotnet-core/obj/Debug/netcoreapp1.1/xplat-dotnet-core.pdb
