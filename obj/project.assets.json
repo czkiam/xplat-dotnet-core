@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "HtmlAgilityPack.NetCoreCodePages/1.5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Text.Encoding.CodePages": "4.0.1",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Xml.XPath": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/HtmlAgilityPack.NetCoreCodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/HtmlAgilityPack.NetCoreCodePages.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -1983,7 +2004,7 @@
           "System.Threading": "4.0.11"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Text.Encoding.CodePages.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
@@ -2241,7 +2262,7 @@
           "System.Xml.ReaderWriter": "4.0.11"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
@@ -2270,6 +2291,17 @@
     }
   },
   "libraries": {
+    "HtmlAgilityPack.NetCoreCodePages/1.5.0.2": {
+      "sha512": "qyeIUXoapkEVy7wOcdZZPQqZ6iqYxo+B/dhIc3yJmfA6vPXkMKfBqQKhTkvzHnxlloJ+wyvkFJ5YTsreQMla7A==",
+      "type": "package",
+      "path": "htmlagilitypack.netcorecodepages/1.5.0.2",
+      "files": [
+        "htmlagilitypack.netcorecodepages.1.5.0.2.nupkg.sha512",
+        "htmlagilitypack.netcorecodepages.nuspec",
+        "lib/net45/HtmlAgilityPack.NetCoreCodePages.dll",
+        "lib/netstandard1.3/HtmlAgilityPack.NetCoreCodePages.dll"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "uqX2Frwf9PW8MaY7PRNY6HM5BpW1D8oj1EdqzrmbEFD5nH63Yat3aEjN/tws6Tw6Fk7LwmLBvtUh32tTeTaHiA==",
       "type": "package",
@@ -7033,6 +7065,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "HtmlAgilityPack.NetCoreCodePages >= 1.5.0.2",
       "Microsoft.NETCore.App >= 1.1.2"
     ]
   },
@@ -7075,6 +7108,10 @@
             "target": "Package",
             "version": "1.1.2",
             "autoReferenced": true
+          },
+          "HtmlAgilityPack.NetCoreCodePages": {
+            "target": "Package",
+            "version": "1.5.0.2"
           }
         }
       }

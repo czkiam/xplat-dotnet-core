@@ -1,14 +1,22 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "15abf1e96c09ab5358d64cef282fd1f7022c3eed"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "xplat-dotnet-core/1.0.0": {
+        "dependencies": {
+          "HtmlAgilityPack.NetCoreCodePages": "1.5.0.2"
+        },
         "runtime": {
           "xplat-dotnet-core.dll": {}
+        }
+      },
+      "htmlagilitypack.netcorecodepages/1.5.0.2": {
+        "runtime": {
+          "lib/netstandard1.3/HtmlAgilityPack.NetCoreCodePages.dll": {}
         }
       }
     }
@@ -18,6 +26,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "htmlagilitypack.netcorecodepages/1.5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qyeIUXoapkEVy7wOcdZZPQqZ6iqYxo+B/dhIc3yJmfA6vPXkMKfBqQKhTkvzHnxlloJ+wyvkFJ5YTsreQMla7A==",
+      "path": "htmlagilitypack.netcorecodepages/1.5.0.2",
+      "hashPath": "htmlagilitypack.netcorecodepages.1.5.0.2.nupkg.sha512"
     }
   }
 }
