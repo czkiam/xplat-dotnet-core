@@ -16,7 +16,7 @@ namespace xplat_dotnet_core
             var links = htmlDocument.DocumentNode.SelectNodes("//a[@href]")
                 .Select(n => n.GetAttributeValue("href", string.Empty))
                 .Where(l => !String.IsNullOrEmpty(l))
-                .Where(l => l.StartsWith("http"));
+                .Where(l => l.StartsWith("http", StringComparison.Ordinal));
 
             return links;
         }
