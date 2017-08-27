@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xplat-dotnet-core", "xplat-dotnet-core.csproj", "{F0A7DB64-72D3-4172-A13A-B7C263B567EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xplat-dotnet-core", "xplat-dotnet-core.csproj", "{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F0A7DB64-72D3-4172-A13A-B7C263B567EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0A7DB64-72D3-4172-A13A-B7C263B567EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0A7DB64-72D3-4172-A13A-B7C263B567EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0A7DB64-72D3-4172-A13A-B7C263B567EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8C48B8B4-5CEA-4D17-971D-AA4B5D96E81C}
+		SolutionGuid = {775C0921-68C5-40E6-9567-5FD6627C7170}
 	EndGlobalSection
 EndGlobal
