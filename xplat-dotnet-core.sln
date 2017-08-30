@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xplat-dotnet-core", "xplat-dotnet-core.csproj", "{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckListConsole", "CheckListConsole\CheckListConsole.csproj", "{900BC8E6-BD29-4301-A195-647F83E9A5D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckListTest", "CheckListTest\CheckListTest.csproj", "{A75E612A-26A9-4C7A-8BE2-0A3E71256A98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C334A4A7-3B70-4319-AB56-0CC9A6F41C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900BC8E6-BD29-4301-A195-647F83E9A5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900BC8E6-BD29-4301-A195-647F83E9A5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900BC8E6-BD29-4301-A195-647F83E9A5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900BC8E6-BD29-4301-A195-647F83E9A5D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A75E612A-26A9-4C7A-8BE2-0A3E71256A98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75E612A-26A9-4C7A-8BE2-0A3E71256A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75E612A-26A9-4C7A-8BE2-0A3E71256A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75E612A-26A9-4C7A-8BE2-0A3E71256A98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
