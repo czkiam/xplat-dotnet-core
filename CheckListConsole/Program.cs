@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Net.Http;
 
-namespace xplat_dotnet_core
+namespace CheckListConsole
 {
     class Program
     {
