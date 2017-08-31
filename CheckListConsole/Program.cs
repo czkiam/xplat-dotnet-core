@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 
@@ -8,6 +9,10 @@ namespace CheckListConsole
     {
         static void Main(string[] args)
         {
+            var file = Path.GetTempFileName();
+            Console.WriteLine(file);
+            return;
+
             var site = "https://g0t4.github.io/pluralsight-dotnet-core-xplat-apps";
             var client = new HttpClient();
 
