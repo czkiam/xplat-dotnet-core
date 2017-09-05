@@ -9,9 +9,16 @@ namespace CheckListConsole
     {
         static void Main(string[] args)
         {
-            var file = Path.GetTempFileName();
-            Console.WriteLine(file);
-            return;
+            var currentDirectory = Directory.GetCurrentDirectory();
+            var outputFolder = "reports";
+            var outputFile = "report.txt";
+            var outputPath = Path.Combine(currentDirectory, outputFolder, outputFile);
+            
+            var directory = Path.GetDirectoryName(outputPath);
+
+            //will create directory if not exists. 
+            Directory.CreateDirectory(directory);
+            var file = outputPath;
 
             var site = "https://g0t4.github.io/pluralsight-dotnet-core-xplat-apps";
             var client = new HttpClient();
@@ -24,6 +31,8 @@ namespace CheckListConsole
             var links = LinkChecker.Getlinks(body.Result);
             links.ToList().ForEach(Console.WriteLine);
 
+            //will create/ overwrite content of file
+            File.WriteAllLines(file, links);
         }
     }
 }
