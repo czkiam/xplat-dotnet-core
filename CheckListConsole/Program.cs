@@ -12,8 +12,21 @@ namespace CheckListConsole
     {
         static void Main(string[] args)
         {
+            /* Log level
+             * trace = 0
+             * debug = 1
+             * information = 2
+             * warning = 3
+             * error = 4
+             * critical = 5
+             */
+            //default logging level is information
+
             var factory = new LoggerFactory();
             factory.AddConsole();
+            factory.AddDebug(LogLevel.Debug);
+            factory.AddFile(Path.Combine("logs", "checklist-{Date}.txt"), LogLevel.Debug);
+
             var logger = factory.CreateLogger("main");
             
             var config = new Config(args);
@@ -24,13 +37,12 @@ namespace CheckListConsole
 
             var client = new HttpClient();
             var body = client.GetStringAsync(config.Site);
-            logger.LogInformation(body.Result);
+            logger.LogDebug(body.Result);
 
             Console.WriteLine("Links");
             var links = LinkChecker.Getlinks(body.Result);
             links.ToList().ForEach(Console.WriteLine);
             
-
             //will create/ overwrite content of file            
             var checkedLinks = LinkChecker.CheckLinks(links);
             
