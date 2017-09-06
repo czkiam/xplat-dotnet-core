@@ -1,7 +1,10 @@
 # vS build files
 obj
 bin
+
+#app working and log files
 reports
+logs
 
 # Windows image file caches
 Thumbs.db
