@@ -18,7 +18,7 @@ namespace CheckListConsole
 
             //will create directory if not exists. 
             Directory.CreateDirectory(directory);
-            var file = outputPath;
+            //var file = outputPath;
 
             var site = "https://g0t4.github.io/pluralsight-dotnet-core-xplat-apps";
             var client = new HttpClient();
@@ -32,7 +32,17 @@ namespace CheckListConsole
             links.ToList().ForEach(Console.WriteLine);
 
             //will create/ overwrite content of file
-            File.WriteAllLines(file, links);
+            //File.WriteAllLines(file, links);
+            var checkedLinks = LinkChecker.CheckLinks(links);
+            using (var file = File.CreateText(outputPath))
+            {
+                foreach (var link in checkedLinks.OrderBy(l => l.Exists))
+                {
+                    var status = link.IsMissing ? "missing" : "OK";
+                    file.WriteLine($"{status} - {link.Link}");
+                }
+            }
+            
         }
     }
 }
