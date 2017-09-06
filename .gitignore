@@ -1,6 +1,7 @@
 # vS build files
 obj
 bin
+reports
 
 # Windows image file caches
 Thumbs.db

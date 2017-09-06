@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,19 +12,25 @@ namespace CheckListConsole
     {
         static void Main(string[] args)
         {
+            var factory = new LoggerFactory();
+            factory.AddConsole();
+            var logger = factory.CreateLogger("main");
+            
             var config = new Config(args);
 
             //will create directory if not exists. 
             Directory.CreateDirectory(config.Output.GetReportDirectory());
+            logger.LogInformation($"Saving report to {config.Output.GetResportFilePath()}");
+
             var client = new HttpClient();
             var body = client.GetStringAsync(config.Site);
-            Console.WriteLine(body.Result);
+            logger.LogInformation(body.Result);
 
-            Console.WriteLine();
             Console.WriteLine("Links");
             var links = LinkChecker.Getlinks(body.Result);
             links.ToList().ForEach(Console.WriteLine);
             
+
             //will create/ overwrite content of file            
             var checkedLinks = LinkChecker.CheckLinks(links);
             
