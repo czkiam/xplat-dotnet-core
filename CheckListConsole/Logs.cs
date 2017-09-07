@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +11,7 @@ namespace CheckListConsole
     {
         public static LoggerFactory Factory = new LoggerFactory();
 
-        static Logs()
+        public static void Init(IConfiguration configuration)
         {
             /* Log level
              * trace = 0
@@ -22,9 +23,12 @@ namespace CheckListConsole
              */
             //default logging level is information
             
-            Factory.AddConsole(LogLevel.Trace, includeScopes: true);
-            Factory.AddDebug(LogLevel.Debug);
-            Factory.AddFile(Path.Combine("logs", "checklist-{Date}.json"), isJson: true,  minimumLevel: LogLevel.Trace);
+            //Factory.AddConsole(LogLevel.Trace, includeScopes: true);
+            Factory.AddConsole(configuration.GetSection("Logging"));
+            //Factory.AddDebug(LogLevel.Debug);
+            Factory.AddFile(Path.Combine("logs", "checklist-{Date}.json"), 
+                isJson: true,  
+                minimumLevel: LogLevel.Trace);
         }
     }
 }

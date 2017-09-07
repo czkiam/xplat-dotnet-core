@@ -10,6 +10,7 @@ namespace CheckListConsole
     {
         public string Site { get; set; }
         public OutputSettings Output { get; set; }
+        public IConfigurationRoot ConfigurationRoot { get; set; }
 
         public Config(string[] args)
         {
@@ -28,6 +29,8 @@ namespace CheckListConsole
                 .AddCommandLine(args);
 
             var configuration = configBuilder.Build();
+            ConfigurationRoot = configuration;
+
             Site  = configuration["site"];
 
             //var outputSettings = new OutputSettings();

@@ -12,8 +12,10 @@ namespace CheckListConsole
     {
         static void Main(string[] args)
         {
-            var logger = Logs.Factory.CreateLogger<Program>();
             var config = new Config(args);
+            Logs.Init(config.ConfigurationRoot);
+            var logger = Logs.Factory.CreateLogger<Program>();
+            
 
             //will create directory if not exists. 
             Directory.CreateDirectory(config.Output.GetReportDirectory());
@@ -26,7 +28,7 @@ namespace CheckListConsole
             //Console.WriteLine("Links");
             var links = LinkChecker.Getlinks(config.Site, body.Result);
             //links.ToList().ForEach(Console.WriteLine);
-            
+
             //will create/ overwrite content of file            
             var checkedLinks = LinkChecker.CheckLinks(links);
             
