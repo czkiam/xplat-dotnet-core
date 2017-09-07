@@ -62,12 +62,4 @@ namespace CheckListConsole
             }
         }
     }
-
-    public class LinkCheckResult
-    {
-        public bool Exists => String.IsNullOrWhiteSpace(Problem);
-        public bool IsMissing => !Exists;
-        public string Problem { get; set; }
-        public string Link { get; set; }
-    }
 }
