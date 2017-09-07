@@ -9,7 +9,7 @@ namespace CheckListConsole
         public bool IsMissing => !Exists;
         public string Problem { get; set; }
         public string Link { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CheckedAt { get; set; } = DateTime.UtcNow;
 
     }
 }
