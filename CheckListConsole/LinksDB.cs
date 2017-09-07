@@ -14,7 +14,7 @@ namespace CheckListConsole
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // MSSQL:
-            var connection = @"Server=localhost;Database=Links;User Id=sa;Password=whatever12";
+            var connection = @"Server=localhost;Database=Links;User Id=sa;Password=whatever12!";
             optionsBuilder.UseSqlServer(connection);
 
             // MySQL (Pomelo):
