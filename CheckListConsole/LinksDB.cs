@@ -6,6 +6,9 @@ namespace CheckListConsole
 {
     using Microsoft.EntityFrameworkCore;
     using System.IO;
+    using MySql.Data.EntityFrameworkCore;
+    using MySQL.Data.EntityFrameworkCore;
+    using MySQL.Data.EntityFrameworkCore.Extensions;
 
     public class LinksDb : DbContext
     {
@@ -14,8 +17,12 @@ namespace CheckListConsole
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // MSSQL:
-            var connection = @"Server=localhost;Database=Links;User Id=sa;Password=whatever12!";
-            optionsBuilder.UseSqlServer(connection);
+            //var connection = @"Server=localhost;Database=Links;User Id=sa;Password=whatever12!";
+            //optionsBuilder.UseSqlServer(connection);
+
+            // MySQL (Official):
+            var connection = "server=localhost;userid=root;pwd=password;database=Links;sslmode=none;";
+            optionsBuilder.UseMySQL(connection);
 
             // MySQL (Pomelo):
             //var connection = "server=localhost;userid=root;pwd=password;database=Links;sslmode=none;";
