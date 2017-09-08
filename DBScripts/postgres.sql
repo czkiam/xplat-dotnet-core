@@ -1,5 +1,5 @@
 CREATE TABLE "Links" (
-"ID" SERIAL PRIMARY KEY,
+"Id" SERIAL PRIMARY KEY,
 "Problem" TEXT,
 "Link" TEXT,
 "CheckedAt" TIMESTAMP
