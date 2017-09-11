@@ -1,0 +1,6 @@
+CREATE TABLE Links (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Problem TEXT,
+    Link TEXT,
+    CheckedAt TEXT
+);
