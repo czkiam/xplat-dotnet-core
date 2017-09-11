@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/xplat-dotnet-core.csproj"
+                "${workspaceRoot}/CheckListConsole/CheckListConsole.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"

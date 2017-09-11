@@ -3,6 +3,8 @@ using Hangfire.MemoryStorage;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace CheckListConsole
 {
@@ -18,10 +20,18 @@ namespace CheckListConsole
             RecurringJob.AddOrUpdate<CheckLinkJob>("check-link", j => j.Execute(config.Site, config.Output), Cron.Minutely);
             RecurringJob.Trigger("check-link");
 
+            var host = new WebHostBuilder()
+                            .UseKestrel()
+                            .UseContentRoot(Directory.GetCurrentDirectory())
+                            .UseIISIntegration()
+                            .UseStartup<Startup>()
+                            .Build();
+
             using (var server = new BackgroundJobServer())
             {
-                Console.WriteLine("Hangfire Server started. Press any key to exit...");
-                Console.ReadKey();
+                Console.WriteLine("Hangfire Server Started.");
+
+                host.Run();
             }
 
         }
