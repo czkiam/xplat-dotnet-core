@@ -29,12 +29,12 @@ namespace CheckListConsole
             //optionsBuilder.UseMySql(connection);
 
             // PostgreSQL (Npgsql):
-            var connection = "Host=localhost;Database=Links;Username=postgres;Password=password";
-            optionsBuilder.UseNpgsql(connection);
+            //var connection = "Host=localhost;Database=Links;Username=postgres;Password=password";
+            //optionsBuilder.UseNpgsql(connection);
 
             // SQLite:
-            //var databaseLocation = Path.Combine(Directory.GetCurrentDirectory(), "links.db");
-            //optionsBuilder.UseSqlite($"Filename={databaseLocation}");
+            var databaseLocation = Path.Combine(Directory.GetCurrentDirectory(), "links.db");
+            optionsBuilder.UseSqlite($"Filename={databaseLocation}");
 
         }
     }

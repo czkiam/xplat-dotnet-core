@@ -2,9 +2,7 @@
   "Logging": {
     "IncludeScopes": true,
     "LogLevel": {
-      "Default": "Information",
-      "CheckListConsole.LinkChecker": "Trace",
-      "CheckListConsole.Program" :  "Debug"
+      "Default": "Information"
     }
   }
 }
