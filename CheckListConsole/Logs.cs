@@ -9,9 +9,7 @@ namespace CheckListConsole
 {
     public static class Logs
     {
-        public static ILoggerFactory Factory = new LoggerFactory();
-
-        public static void Init(IConfiguration configuration)
+        public static void Init(ILoggerFactory factory, IConfiguration configuration)
         {
             /* Log level
              * trace = 0
@@ -22,11 +20,11 @@ namespace CheckListConsole
              * critical = 5
              */
             //default logging level is information
-            
+
             //Factory.AddConsole(LogLevel.Trace, includeScopes: true);
-            Factory.AddConsole(configuration.GetSection("Logging"));
+            factory.AddConsole(configuration.GetSection("Logging"));
             //Factory.AddDebug(LogLevel.Debug);
-            Factory.AddFile(Path.Combine("logs", "checklist-{Date}.json"), 
+            factory.AddFile(Path.Combine("logs", "checklist-{Date}.json"), 
                 isJson: true,  
                 minimumLevel: LogLevel.Trace);
         }

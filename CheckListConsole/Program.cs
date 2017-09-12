@@ -14,8 +14,6 @@ namespace CheckListConsole
     {
         static void Main(string[] args)
         {
-            
-
             GlobalConfiguration.Configuration.UseMemoryStorage();
 
             var host = new WebHostBuilder()
@@ -36,9 +34,13 @@ namespace CheckListConsole
             //sample get another registered service
             //var jobActicator = host.Services.GetService<JobActivator>();
             //Console.WriteLine(jobActicator.GetType());
-            
-            
-            //RecurringJob.Trigger("check-link");
+
+            RecurringJob.AddOrUpdate<CheckLinkJob>("check-link",
+                j => j.Execute(),
+                Cron.Minutely);
+
+            RecurringJob.Trigger("check-link");
+
             //RecurringJob.AddOrUpdate(() => Console.WriteLine("Simple!"), Cron.Minutely);
 
             host.Run();

@@ -25,4 +25,9 @@ namespace CheckListConsole
             return Path.GetDirectoryName(GetResportFilePath());
         }
     }
+
+    public class SiteSettings
+    {
+        public string Site { get; set; }
+    }
 }

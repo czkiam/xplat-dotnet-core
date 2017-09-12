@@ -11,9 +11,14 @@ namespace CheckListConsole
 {
     public class LinkChecker
     {
-        protected static readonly ILogger<LinkChecker> Logger = Logs.Factory.CreateLogger<LinkChecker>();
+        ILogger _logger;
 
-        public static IEnumerable<string> Getlinks(string link, string page)
+        public LinkChecker(ILogger<LinkChecker> logger)
+        {
+            _logger = logger;
+        }
+
+        public IEnumerable<string> Getlinks(string link, string page)
         {
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(page);
@@ -21,9 +26,9 @@ namespace CheckListConsole
                 .Select(n => n.GetAttributeValue("href", string.Empty))
                 .ToList();
 
-            using (Logger.BeginScope($"Getting links from {link}"))
+            using (_logger.BeginScope($"Getting links from {link}"))
             {
-                originalLinks.ForEach(l => Logger.LogTrace(100, "Original link: {link}", l));
+                originalLinks.ForEach(l => _logger.LogTrace(100, "Original link: {link}", l));
             };
 
             var links = originalLinks
@@ -33,14 +38,14 @@ namespace CheckListConsole
             return links;
         }
 
-        public static IEnumerable<LinkCheckResult> CheckLinks(IEnumerable<string> links)
+        public IEnumerable<LinkCheckResult> CheckLinks(IEnumerable<string> links)
         {
             var all = Task.WhenAll(links.Select(CheckLinkAsync));
 
             return all.Result;
         }
 
-        public static async Task<LinkCheckResult> CheckLinkAsync(string link)
+        public async Task<LinkCheckResult> CheckLinkAsync(string link)
         {
             var result = new LinkCheckResult();
             result.Link = link;
@@ -55,7 +60,7 @@ namespace CheckListConsole
                 }
                 catch (HttpRequestException exception)
                 {
-                    Logger.LogTrace(0, exception, "Failed to retrieve {link}", link);
+                    _logger.LogTrace(0, exception, "Failed to retrieve {link}", link);
                     result.Problem = exception.Message;
                     return result;
                 }
