@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CheckListConsole
 {
@@ -12,28 +14,34 @@ namespace CheckListConsole
     {
         static void Main(string[] args)
         {
-            var config = new Config(args);
-            Logs.Init(config.ConfigurationRoot);
+            
 
             GlobalConfiguration.Configuration.UseMemoryStorage();
 
-            RecurringJob.AddOrUpdate<CheckLinkJob>("check-link", j => j.Execute(config.Site, config.Output), Cron.Minutely);
-            RecurringJob.Trigger("check-link");
-
             var host = new WebHostBuilder()
                             .UseKestrel()
+                            //.UseLoggerFactory(Logs.Factory)
                             .UseContentRoot(Directory.GetCurrentDirectory())
-                            .UseIISIntegration()
+                            //.UseIISIntegration()
                             .UseStartup<Startup>()
                             .Build();
 
-            using (var server = new BackgroundJobServer())
-            {
-                Console.WriteLine("Hangfire Server Started.");
+            //sample code of getting registered logger factory class
+            //var loggerFactory = host.Services.GetService<ILoggerFactory>();
+            //loggerFactory.CreateLogger<Program>().LogInformation("test");
 
-                host.Run();
-            }
+            //var logger = host.Services.GetService<ILogger<Program>>();
+            //logger.LogInformation("Direct logging test");
 
+            //sample get another registered service
+            //var jobActicator = host.Services.GetService<JobActivator>();
+            //Console.WriteLine(jobActicator.GetType());
+            
+            
+            //RecurringJob.Trigger("check-link");
+            //RecurringJob.AddOrUpdate(() => Console.WriteLine("Simple!"), Cron.Minutely);
+
+            host.Run();
         }
     }
 }

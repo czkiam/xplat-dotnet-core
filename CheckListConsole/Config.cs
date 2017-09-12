@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace CheckListConsole
@@ -12,7 +13,7 @@ namespace CheckListConsole
         public OutputSettings Output { get; set; }
         public IConfigurationRoot ConfigurationRoot { get; set; }
 
-        public Config(string[] args)
+        public Config()
         {
             var inMemory = new Dictionary<string, string>
             {
@@ -26,7 +27,7 @@ namespace CheckListConsole
                 .AddEnvironmentVariables()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("checksettings.json", true)
-                .AddCommandLine(args);
+                .AddCommandLine(Environment.GetCommandLineArgs().Skip(1).ToArray());
 
             var configuration = configBuilder.Build();
             ConfigurationRoot = configuration;

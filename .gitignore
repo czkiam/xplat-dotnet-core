@@ -1,3 +1,7 @@
+.vagrant
+.vscode
+*.db
+
 # vS build files
 obj
 bin
